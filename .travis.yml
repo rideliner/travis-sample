@@ -3,8 +3,8 @@
 
 language: ruby
 rvm:
-  - 2.2
-  - rbx-2
+  - default
+  - rbx-3
 
 bundler_args: --without lint --jobs=3 --retry=3
 cache: bundler
@@ -17,7 +17,7 @@ script: bundle exec rake ci
 
 matrix:
   include:
-    - rvm: 2.2
+    - rvm: default
       gemfile: gemfiles/Gemfile.doc
       script:
         - if [ $TRAVIS_PULL_REQUEST == "false" ]; then bundle exec rake yard yard:deploy; fi
