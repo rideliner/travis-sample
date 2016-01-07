@@ -1,0 +1,8 @@
+# encoding: utf-8
+# Copyright (c) 2016 Nathan Currier
+
+eval_gemfile File.join(__dir__, '../Gemfile')
+
+group :development, :test do
+  gem 'codecov'
+end
