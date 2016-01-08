@@ -13,6 +13,7 @@ gemfile: gemfiles/Gemfile.ci
 before_install:
   - gem update --system
   - gem install bundler
+  - rvm gemset list_all
 script: bundle exec rake ci
 
 matrix:
