@@ -6,13 +6,5 @@ require 'yard/rake/yardoc_task'
 
 YARD::Rake::YardocTask.new(:yard)
 
-# require 'yard-ghpages-deploy'
-namespace :yard do
-  desc 'Deploy documentation to Github Pages'
-  task :deploy do
-    puts 'Not Yet Implemented'
-  end
-end
-
 CLEAN.include '.yardoc'
 CLOBBER.include '_yardoc'

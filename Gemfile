@@ -6,19 +6,16 @@ source 'https://rubygems.org'
 # gemspec
 
 group :development do
-  gem 'rake'
-end
+  gem 'rake', require: false
 
-group :development, :lint do
-  gem 'rubocop'
-end
+  # lint
+  gem 'rubocop', '>= 0.36.0', require: false
 
-group :development, :test do
-  gem 'minitest'
-  gem 'simplecov'
-end
+  # test
+  gem 'minitest', require: false
+  gem 'simplecov', require: false
 
-group :development, :doc do
-  gem 'yard-dizby'
-  gem 'kramdown'
+  # doc
+  gem 'yard', '> 0.7', require: false
+  gem 'kramdown', require: false
 end
