@@ -1,10 +1,10 @@
 # encoding: utf-8
 # Copyright (c) 2016 Nathan Currier
 
-if ENV['TRAVIS']
+if ENV['TRAVIS'] && ENV['DOCS']
   namespace :yard do
     if ENV['TRAVIS_PULL_REQUEST'] == 'false'
-      require 'github-pages-deploy'
+      require 'ghpages-deploy'
 
       desc 'Deploy documentation to Github Pages'
       GithubPages::DeployTask.new(:deploy, [:yard]) do |t|

@@ -4,5 +4,5 @@
 eval_gemfile File.join(__dir__, 'Gemfile.ci')
 
 group :development, :doc do
-  # gem 'yard-ghpages-deploy'
+  gem 'ghpages_deploy'
 end

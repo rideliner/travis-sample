@@ -16,6 +16,8 @@ matrix:
     gemfile: gemfiles/Gemfile.doc
     script:
     - bundle exec rake yard:deploy
+    env:
+    - DOCS=true
 sudo: false
 env:
   global:
