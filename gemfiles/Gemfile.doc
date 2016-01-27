@@ -3,6 +3,6 @@
 
 eval_gemfile File.join(__dir__, 'Gemfile.ci')
 
-group :development, :doc do
-  gem 'ghpages_deploy'
+group :development do
+  gem 'ghpages_deploy', require: false
 end
