@@ -4,7 +4,7 @@
 if ENV['TRAVIS'] && ENV['DOCS']
   namespace :yard do
     if ENV['TRAVIS_PULL_REQUEST'] == 'false'
-      require 'ghpages-deploy'
+      require 'ghpages_deploy/rake_task'
 
       desc 'Deploy documentation to Github Pages'
       GithubPages::DeployTask.new(:deploy, [:yard]) do |t|
