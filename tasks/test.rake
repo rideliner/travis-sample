@@ -13,7 +13,7 @@ end
 namespace :test do
   desc 'Generate a test coverage report'
   task :coverage do
-    ENV['COVERAGE'] = true
+    ENV['COVERAGE'] = 'true'
     task(:test).invoke
   end
 end
