@@ -7,7 +7,7 @@ if ENV['TRAVIS'] && ENV['DOCS']
       require 'ghpages_deploy/rake_task'
 
       desc 'Deploy documentation to Github Pages'
-      GithubPages::DeployTask.new(:deploy, [:yard]) do |t|
+      GithubPages::DeployTask.new(:deploy => [:yard]) do |t|
         t.remote = 'origin'
         t.source = '_yardoc'
 
