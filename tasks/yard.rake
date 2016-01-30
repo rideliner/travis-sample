@@ -5,7 +5,8 @@ require 'yard'
 require 'yard/rake/yardoc_task'
 
 YARD::Rake::YardocTask.new(:yard) do |t|
-  t.options += ['--template-path', File.join(__FILE__, '../template')]
+  template_path = File.expand_path('../template', File.dirname(__FILE__))
+  t.options += ['--template-path', template_path]
 end
 
 CLEAN.include '.yardoc'
