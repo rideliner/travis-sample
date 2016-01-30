@@ -3,7 +3,7 @@
 
 source 'https://rubygems.org'
 
-# gemspec
+gemspec path: __dir__
 
 group :development do
   gem 'rake', require: false

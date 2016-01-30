@@ -1,23 +1,22 @@
 language: ruby
-rvm:
-- ruby-head
-- rbx-3.14
 bundler_args: "--without lint --jobs=3 --retry=3"
 cache: bundler
-gemfile: gemfiles/Gemfile.ci
 before_install:
 - gem update --system
 - gem install bundler
 - rvm gemset list_all
-script: bundle exec rake ci
 matrix:
   include:
+  - rvm: ruby-head
+    gemfile: gemfiles/Gemfile.ci
+    script: bundle exec rake ci
+  - rvm: rbx-3.14
+    gemfile: Gemfile
+    script: bundle exec rake test
   - rvm: 2.2
     gemfile: gemfiles/Gemfile.doc
-    script:
-    - bundle exec rake yard:deploy
-    env:
-    - DOCS=true
+    script: bundle exec rake yard:deploy
+    env: DOCS=true
 sudo: false
 env:
   global:

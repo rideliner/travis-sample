@@ -1,5 +1,10 @@
 ---
 
+AllCops:
+  Include:
+    - 'gemfiles/*'
+    - 'tasks/*'
+
 Style/Documentation:
   Enabled: false
 
@@ -14,12 +19,18 @@ Style/CollectionMethods:
 
 Style/Copyright:
   Enabled: true
-  Notice: '^# Copyright \(c\) 2\d{3} Nathan Currier$'
+  Notice: '^# Copyright \(c\) 2\d{3} .+$'
 
 Style/Encoding:
   Enabled: true
 
 Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/MultilineArrayBraceLayout:
+  Enabled: true
+
+Style/MultilineAssignmentLayout:
   Enabled: true
 
 Style/OptionHash:
