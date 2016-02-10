@@ -4,5 +4,5 @@
 eval_gemfile File.expand_path('Gemfile.ci', __dir__)
 
 group :development do
-  gem 'ghpages_deploy', require: false
+  gem 'ghpages_deploy', '>= 1.3.0.beta1', require: false
 end
