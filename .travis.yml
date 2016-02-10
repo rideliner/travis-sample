@@ -15,7 +15,7 @@ matrix:
     script: bundle exec rake test
   - rvm: 2.2
     gemfile: gemfiles/Gemfile.doc
-    script: bundle exec rake yard:deploy
+    script: bundle exec rake yard:deploy --trace
     env: DOCS=true
 sudo: false
 env:
