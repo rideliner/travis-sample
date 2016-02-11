@@ -1,12 +1,6 @@
 # encoding: utf-8
 # Copyright (c) 2016 Nathan Currier
 
-puts "TRAVIS: #{ENV['TRAVIS']}"
-puts "DOCS: #{ENV['DOCS']}"
-puts "TRAVIS_PULL_REQUEST: #{ENV['TRAVIS_PULL_REQUEST']}"
-puts "TRAVIS_TAG: #{ENV['TRAVIS_TAG']}"
-puts "TRAVIS_BRANCH: #{ENV['TRAVIS_BRANCH']}"
-
 if ENV['TRAVIS'] && ENV['DOCS']
   namespace :yard do
     if ENV['TRAVIS_PULL_REQUEST'] == 'false'
@@ -24,6 +18,9 @@ if ENV['TRAVIS'] && ENV['DOCS']
         elsif !branch.empty?
           t.register "branch/#{branch}"
         end
+
+        t.init_jekyll
+        t.json_sitemap
       end
     else
       task :deploy do
