@@ -20,7 +20,7 @@ if ENV['TRAVIS'] && ENV['DOCS']
         end
 
         t.init_jekyll
-        t.json_sitemap
+        t.json_sitemap(['./_yardoc'])
       end
     else
       task :deploy do
