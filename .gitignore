@@ -1,4 +1,4 @@
-Gemfile*.lock
+Gemfile.lock
 
 *.gem
 /pkg/
@@ -6,4 +6,7 @@ Gemfile*.lock
 /.yardoc/
 /_yardoc/
 
-/coverage
+/coverage/
+
+/vendor/bundle/
+.bundle/

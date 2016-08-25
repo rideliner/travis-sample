@@ -3,19 +3,9 @@
 
 source 'https://rubygems.org'
 
-gemspec path: __dir__
+gemspec
 
 group :development do
-  gem 'rake', require: false
-
-  # lint
-  gem 'rubocop', '>= 0.36.0', require: false
-
-  # test
-  gem 'minitest', require: false
-  gem 'simplecov', require: false
-
-  # doc
-  gem 'yard', '> 0.7', require: false
-  gem 'kramdown', require: false
+  gem 'yard', require: false,
+              git: 'https://github.com/lsegal/yard.git'
 end

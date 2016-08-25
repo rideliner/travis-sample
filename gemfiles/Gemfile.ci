@@ -1,8 +1,0 @@
-# encoding: utf-8
-# Copyright (c) 2016 Nathan Currier
-
-eval_gemfile File.expand_path('../Gemfile', __dir__)
-
-group :development do
-  gem 'codecov', require: false
-end
